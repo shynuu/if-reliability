@@ -175,7 +175,6 @@ var rootCmd = &cobra.Command{
 	},
 }
 
-// Main starts the command-line interface.
 func main() {
 	rootCmd.Execute()
 }
