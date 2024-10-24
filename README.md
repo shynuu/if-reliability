@@ -25,7 +25,6 @@
 - `--wifi-password` (`-p`): The password for the WiFi network (required).
 - `--endpoint` (`-e`): The endpoint to ping for connectivity checks (required).
 - `--retry` (`-r`): The number of failed attempts before switching to WiFi (default: 5).
-- `--failure-delay`: Delay in milliseconds before failure is detected.
 
 ## Installation
 
