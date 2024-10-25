@@ -1,49 +1,56 @@
-# Interface Reliability and Switch Script
+# Interface Reliability Tool
 
-## Overview
-
-`if-reliability` is a command-line tool designed to monitor and manage the reliability of network interfaces. It provides functionality to check the connectivity of an interface and switch between LTE and WiFi based on connectivity status.
+Interface Reliability Tool is a command-line utility designed to check the reliability of a network interface by pinging a specified endpoint and automatically switching to a WiFi connection if the primary connection fails.
 
 ## Features
 
-- Pings a specified endpoint to check connectivity.
-- Automatically switches to WiFi if the LTE interface is unreliable.
-- Configurable retry mechanism to determine connectivity loss.
-- Command-line flags for easy configuration of interfaces and parameters.
-
-## Usage
-
-```bash
-./if-reliability --lte-if <LTE_INTERFACE> --wifi-if <WIFI_INTERFACE> --wifi-ssid <WIFI_SSID> --wifi-password <WIFI_PASSWORD> --endpoint <ENDPOINT> --failure-delay <DELAY_IN_MS>
-```
-
-### Flags
-
-- `--lte-if` (`-l`): The LTE interface to monitor (required).
-- `--wifi-if` (`-w`): The WiFi interface to switch to (required).
-- `--wifi-ssid` (`-s`): The SSID of the WiFi network (required).
-- `--wifi-password` (`-p`): The password for the WiFi network (required).
-- `--endpoint` (`-e`): The endpoint to ping for connectivity checks (required).
-- `--retry` (`-r`): The number of failed attempts before switching to WiFi (default: 5).
+- Ping a specified endpoint to check connectivity.
+- Automatically switch to a specified WiFi network upon failure.
+- Customize retry count for failure detection.
+- Replace default route with the WiFi network's route upon successful connection.
 
 ## Installation
 
-Ensure you have Go installed on your system. Clone the repository and build the tool using the provided `compile.sh` script:
+1. Clone the repository:
 
-```bash
-git clone https://github.com/shynuu/if-reliability
-cd if-reliability
-./compile.sh main.go
+   ```
+   git clone <repository-url>
+   ```
+
+2. Navigate to the project directory:
+
+   ```
+   cd <project-directory>
+   ```
+
+3. Build the project using the provided `compile.sh` script:
+
+   ```
+   ./compile.sh main.go
+   ```
+
+## Usage
+
+Run the Interface Reliability Tool with the required flags:
+
 ```
+./if-reliability --wifi-if <wifi-interface> --wifi-ssid <wifi-ssid> --wifi-password <wifi-password> --endpoint <endpoint> [--retry <retry-count>]
+```
+
+- `--wifi-if`: WiFi interface name (required)
+- `--wifi-ssid`: WiFi SSID (required)
+- `--wifi-password`: WiFi password (required)
+- `--endpoint`: Endpoint to check connectivity (required)
+- `--retry`: Number of retries before switching to WiFi (default: 5)
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contributions
+## Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+Contributions are welcome! Please fork the repository and submit a pull request.
 
 ## Contact
 
-For questions or suggestions, please contact Youssouf Drif <youssouf.drif@uni.lu>.
+For questions or issues, please contact **Youssouf Drif** <youssouf.Drif>.

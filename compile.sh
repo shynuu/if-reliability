@@ -18,7 +18,9 @@ compile() {
     exit 0
   fi
 
-  go build -o if-reliability "$1"
+  GOOS=linux GOARCH=amd64 go build -o if-reliability-amd64 "$1"
+  GOOS=darwin GOARCH=arm64 go build -o if-reliability-arm64 "$1"
 }
 
 compile $1
+
