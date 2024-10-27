@@ -38,7 +38,7 @@ func init() {
 // pingIP uses ICMP to ping an IP address and returns the response time in milliseconds.
 // Returns -1 if there is an error or if the ping fails.
 func pingIP(ip string) int {
-	cmd := exec.Command("ping", "-c", "1", ip)
+	cmd := exec.Command("ping", "-c", "1", "-W", "2", ip)
 	output, err := cmd.CombinedOutput()
 	if err != nil {
 		return -1
