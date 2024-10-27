@@ -53,4 +53,10 @@ Contributions are welcome! Please fork the repository and submit a pull request.
 
 ## Contact
 
-For questions or issues, please contact **Youssouf Drif** <youssouf.Drif>.
+For questions or issues, please contact **Youssouf Drif** <youssouf.drif@uni.lu>.
+
+## Project
+
+The Interface Reliability Tool is developed as part of the SnT (Interdisciplinary Centre for Security, Reliability and Trust) initiatives at the University of Luxembourg. It aims to improve network interface management and reliability, aligning with the cutting-edge research and development objectives of SnT.
+
+For more info please visit https://6gspacelab.uni.lu
